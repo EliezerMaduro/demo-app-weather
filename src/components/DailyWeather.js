@@ -1,5 +1,4 @@
 const DailyWeather = props =>{
-    console.log(props)
     return (
         <div className="custom-card">
             <div>

@@ -84,7 +84,6 @@ class App extends React.Component {
     if (coords.error===false){
       const response = await fetch(API_URL)
       const data = await response.json()
-      console.log(data)
       this.setState({                  // object that we want to update    // keep all other key-value pairs
             date: new Intl.DateTimeFormat('en-US', {day: '2-digit', month: '2-digit', year: 'numeric',hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(data.current.dt * 1000 +data.timezone_offset).split(',')[0],
             temperature: data.current.temp,
@@ -153,13 +152,13 @@ class App extends React.Component {
     let error = false
     let country
 
-    if (idcountry==0){
+    if (idcountry==='0'){
       country = 'Venezuela'
-    }else if (idcountry==1){
+    }else if (idcountry==='1'){
       country = 'Argentina'
-    }else if (idcountry==2){
+    }else if (idcountry==='2'){
       country = 'Colombia'
-    }else if (idcountry==3){
+    }else if (idcountry==='3'){
       country = 'España'
     }
 

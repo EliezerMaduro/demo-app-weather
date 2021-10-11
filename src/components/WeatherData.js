@@ -1,5 +1,4 @@
 const WeatherData = props =>{
-    console.log(props)
     return (
         <div>
             {
