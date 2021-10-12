@@ -160,6 +160,8 @@ class App extends React.Component {
       country = 'Colombia'
     }else if (idcountry==='3'){
       country = 'España'
+    }else{
+      error = true
     }
 
     if (city==='Maracay'){
