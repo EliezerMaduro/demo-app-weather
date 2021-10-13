@@ -1,6 +1,6 @@
 const DailyWeather = props =>{
     return (
-        <div className="custom-card">
+        <div data-testid="test-daily-weather" className="custom-card">
             <div>
                 <p>
                     {props.date}

@@ -208,7 +208,7 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="App">
+      <div data-testid="test-app" className="App">
         <h1>Bienvenido al pronostico del clima</h1>
             <CitySelectorItem
             getWeather={this.getWeather}
