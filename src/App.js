@@ -4,7 +4,6 @@ import WeatherData from './components/WeatherData';
 import React from 'react';
 import { WEATHER_KEY } from './keys';
 import WeeklyWeater from './components/WeeklyWeather';
-import key from './components/key'
 
 class App extends React.Component {
 
@@ -197,20 +196,16 @@ class App extends React.Component {
         });
 
     }else {
+      const copy_current_weather = {...this.state.current_weather,
+                                temperature: ""
+                                }
       this.setState({
         error:"Porfavor ingresa una ciudad y un pais",
-        temperature: ""
+        current_weather: copy_current_weather
       })
     }
   }
 
-  searchCity = async (city)=>{
-    const API_URL = 'https://maps.googleapis.com/maps/api/geocode/json'
-    return await new Promise(async (resolve,reject)=>{
-      const response = await fetch(API_URL + `?address=${city}&key=${key}`).then(response=>response.json()).then(data=>data)
-      resolve(response)
-    })
-  }
   getCordinates = (city,idcountry)=>{
     
     let lat
