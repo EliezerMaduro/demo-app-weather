@@ -8,7 +8,7 @@ const WeatherData = props =>{
                 </div>
             }
             {
-                props.temperature ?
+                props.current_weather.temperature ?
                 <div>
                     <h2>
                         {props.city + ", " + props.country}
@@ -16,22 +16,22 @@ const WeatherData = props =>{
                     <div className="card card-body card-custom">
                         <h3>Clima actual</h3>
                         <p>
-                            Fecha: {props.date}
+                            Fecha: {props.current_weather.date}
                         </p>
                         <p>
-                            Descripcion: {props.description}
+                            Descripcion: {props.current_weather.description}
                         </p>
                         <p>
-                            Temperatura: {props.temperature} °C
+                            Temperatura: {props.current_weather.temperature} °C
                         </p>
                         <p>
-                            Humedad: {props.humidity} %
+                            Humedad: {props.current_weather.humidity} %
                         </p>
                         <p>
-                            Sensación Termica: {props.feels_like} °C
+                            Sensación Termica: {props.current_weather.feels_like} °C
                         </p>
                         <p>
-                            Velocidad del viento: {props.wind_speed} km/h
+                            Velocidad del viento: {props.current_weather.wind_speed} km/h
                         </p>
                     </div>
                 </div>

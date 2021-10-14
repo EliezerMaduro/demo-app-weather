@@ -13,12 +13,12 @@ const DailyWeather = props =>{
             </div>
             <div>
                 <p>
-                    Maxima temp: {props.max_temp} °C
+                    Maxima temp: {props.temperature_max} °C
                 </p>
             </div>
             <div>
                 <p>
-                    Minima temp: {props.min_temp} °C
+                    Minima temp: {props.temperature_min} °C
                 </p>
             </div>
             <div>
